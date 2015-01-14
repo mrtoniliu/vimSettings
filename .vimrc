@@ -24,11 +24,12 @@ let g:vim_markdown_folding_disabled=1
 
 set number
 set background=dark
+"let base16colorspace=256
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
-  colorscheme base16-eighties
 endif
 
+colorscheme base16-eighties
 highlight LineNr ctermfg=grey ctermbg=black
 set tabstop=4
 set smartindent
