@@ -10,7 +10,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-
+Plugin 'chriskempson/base16-vim' 
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
