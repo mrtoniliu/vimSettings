@@ -11,9 +11,9 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'chriskempson/base16-vim' 
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'scrooloose/nerdtree.git'
 
@@ -27,18 +27,32 @@ let g:vim_markdown_folding_disabled=1
 syntax on
 set number
 set background=dark
-"let base16colorspace=256
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
 
+" Use the colour scheme
 colorscheme base16-eighties
+
+" set the font in gvim
+if has("gui_running")
+    set guifont=Source\ Code\ Pro\ 12
+endif
+" Set the line number in dark background
 highlight LineNr ctermfg=grey ctermbg=black
+
 set tabstop=4
 set smartindent
 set shiftwidth=4
+set expandtab
 
 " turn on the status bar
 set laststatus=2
 set ru
+" The settings for statuslin
 set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
+
+" Highlight the search terms
+set hlsearch
+
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
