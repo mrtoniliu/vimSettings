@@ -16,6 +16,9 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'scrooloose/nerdtree.git'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'tpope/vim-surround'
+Plugin 'kien/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -36,7 +39,13 @@ colorscheme base16-eighties
 
 " set the font in gvim
 if has("gui_running")
-    set guifont=Source\ Code\ Pro\ 12
+    if has("gui_win32")
+        set guifont=Consolas\ 12
+    elseif has("gui_gtk2")
+        set guifont=Source\ Code\ Pro\ 12
+    else
+        set guifont=Source\ Code\ Pro\ 12
+    endif
 endif
 " Set the line number in dark background
 highlight LineNr ctermfg=grey ctermbg=black
@@ -56,3 +65,16 @@ set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 set hlsearch
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
+
+" ==== Key shortcuts ====
+
+" map the leader key to ,
+let mapleader = ','
+" map the C - hjkl to control window
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+nmap <leader>d :NERDTreeToggle<CR>
+nmap <leader>f :NERDTreeFind<CR>
