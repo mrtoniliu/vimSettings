@@ -14,7 +14,11 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'Valloric/YouCompleteMe'
-
+Plugin 'tpope/vim-surround'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'kien/ctrlp.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'vimwiki/vimwiki'
 Plugin 'scrooloose/nerdtree.git'
 
 " All of your Plugins must be added before the following line
@@ -39,7 +43,7 @@ if has("gui_running")
     set guifont=Source\ Code\ Pro\ 12
 endif
 " Set the line number in dark background
-highlight LineNr ctermfg=grey ctermbg=black
+"highlight LineNr ctermfg=grey ctermbg=black
 
 set tabstop=4
 set smartindent
@@ -56,3 +60,12 @@ set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 set hlsearch
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
+
+
+"Key maps
+let mapleader = ','
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
