@@ -21,8 +21,6 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vimwiki/vimwiki'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'tpope/vim-surround'
-Plugin 'kien/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -34,11 +32,10 @@ let g:vim_markdown_folding_disabled=1
 syntax on
 set number
 set background=dark
-if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
-endif
+set t_Co=256
 
 " Use the colour scheme
+let base16colorspace=256
 colorscheme base16-eighties
 
 " set the font in gvim
@@ -50,23 +47,31 @@ if has("gui_running")
     else
         set guifont=Source\ Code\ Pro\ 12
     endif
+    if ($TERM_PROGRAM == 'iTerm.app')
+        "highlight LineNr ctermfg=light ctermbg=dark
+    endif
 endif
-" Set the line number in dark background
-"highlight LineNr ctermfg=grey ctermbg=black
 
 set tabstop=4
 set smartindent
+set copyindent
 set shiftwidth=4
 set expandtab
+set cursorcolumn
+set cursorline
+set showmatch
 
 " turn on the status bar
 set laststatus=2
 set ru
 " The settings for statuslin
-set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
+"set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 
+" ==== Search ====
 " Highlight the search terms
 set hlsearch
+set incsearch
+set ignorecase
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
