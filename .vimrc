@@ -31,10 +31,10 @@ let g:vim_markdown_folding_disabled=1
 
 syntax on
 set number
+
+" Colors related
 set background=dark
 set t_Co=256
-
-" Use the colour scheme
 let base16colorspace=256
 colorscheme base16-eighties
 
