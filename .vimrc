@@ -53,7 +53,7 @@ if has("gui_running")
 endif
 
 set tabstop=4
-set smartindent
+set autoindent
 set copyindent
 set shiftwidth=4
 set expandtab
