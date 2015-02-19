@@ -57,8 +57,8 @@ set autoindent
 set copyindent
 set shiftwidth=4
 set expandtab
-set cursorcolumn
-set cursorline
+"set cursorcolumn
+"set cursorline
 set showmatch
 
 " turn on the status bar
