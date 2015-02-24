@@ -70,6 +70,9 @@ set showmatch
 set laststatus=2
 set ru
 
+" Useful backspace
+set backspace=indent,eol,start
+
 " ==== Search ====
 " Highlight the search terms
 set hlsearch
