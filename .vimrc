@@ -26,6 +26,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'rking/ag.vim'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -78,6 +79,13 @@ set backspace=indent,eol,start
 set hlsearch
 set incsearch
 set ignorecase
+
+let g:airline#extensions#whitespace#enabled = 0
+
+" Set backup swp file location
+"set backupdir=~/vimback/backup//
+"set directory=~/vimback/swap//
+"set undodir=~/vimback/undo//
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
