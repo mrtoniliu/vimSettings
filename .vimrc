@@ -1,3 +1,4 @@
+set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -51,7 +52,7 @@ if has("gui_running")
     elseif has("gui_gtk2")
         set guifont=Source\ Code\ Pro\ 12
     else
-        set guifont=Source\ Code\ Pro\ 12
+        set guifont=Monaco\ 11
     endif
     if ($TERM_PROGRAM == 'iTerm.app')
         "highlight LineNr ctermfg=light ctermbg=dark
