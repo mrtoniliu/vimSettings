@@ -1,0 +1,50 @@
+set encoding=utf-8
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+filetype plugin indent on    " required
+
+syntax on
+set number
+
+" Colors related
+set background=dark
+set t_Co=256
+
+set tabstop=4
+set autoindent
+set copyindent
+set shiftwidth=4
+set expandtab
+"set cursorcolumn
+"set cursorline
+set showmatch
+
+" turn on the status bar
+set laststatus=2
+set ru
+
+" Useful backspace
+set backspace=indent,eol,start
+
+" ==== Search ====
+" Highlight the search terms
+set hlsearch
+set incsearch
+set ignorecase
+
+" Set backup swp file location
+"set backupdir=~/vimback/backup//
+"set directory=~/vimback/swap//
+"set undodir=~/vimback/undo//
+
+" ==== Key shortcuts ====
+
+" map the leader key to ,
+let mapleader = ','
+" map the C - hjkl to control window
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
